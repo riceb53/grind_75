@@ -9,7 +9,7 @@ def isValid(s):
         if char in parens_dict:
             opened_parens.append(char)
         else:
-            if parens_dict[opened_parens[-1]] == char:
+            if opened_parens and parens_dict[opened_parens[-1]] == char:
                 opened_parens.pop()
             else:
                 return False
